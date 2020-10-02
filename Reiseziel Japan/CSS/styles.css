@@ -1,0 +1,426 @@
+* {
+    box-sizing: border-box;
+}
+
+/* #region body */
+
+body {
+    width: 100%;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.home {
+    background-color: rgb(255, 234, 237);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: minmax(10rem, auto);
+    justify-content: center;
+    grid-template-areas: 
+        "header header header header"
+        "toklink toklink kyolink kyolink"
+        "icon1 fuklink fuklink icon2"
+        "footer footer footer footer";
+    grid-gap: 1rem;
+}
+
+.tokyo {
+    background-color: rgb(14, 11, 58);
+}
+
+.kyoto {
+    background-color: rgb(52, 3, 6);
+}
+
+.fukuoka {
+    background-color:  rgb(50, 16, 70);
+}
+
+/* #endregion body */
+
+/* #region header*/
+
+header {
+    height: 30rem;
+    width: 100%;
+    background-size: cover;
+    font-size:5rem;
+}
+
+.home header {
+    background-image: url('../Bilder/EUL35GMUUAYhQq5.jpg');
+    background-position: top;
+    grid-area: header;
+}
+
+.tokyo header {
+    background-image: url('../Bilder/tokyo-tower.jpg');
+    background-position: center;
+}
+
+.kyoto header {
+    background-image: url('../Bilder/kyoto-wallpaper2.jpg');
+    background-position: center;
+}
+
+.fukuoka header {
+    background-image: url('../Bilder/fukuoka-wallpaper.jpg');
+    background-position: bottom;
+}
+
+header div {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.home header div{
+    background-image: linear-gradient(180deg, rgba(245, 245, 245, 0) 65%, rgb(255, 234, 237));
+}
+
+.tokyo header div{
+    background-image: linear-gradient(180deg, rgba(245, 245, 245, 0) 65%, rgb(14, 11, 58));
+}
+
+.kyoto header div{
+    background-image: linear-gradient(180deg, rgba(245, 245, 245, 0) 65%, rgb(52, 3, 6));
+}
+
+.fukuoka header div{
+    background-image: linear-gradient(180deg, rgba(245, 245, 245, 0) 65%, rgb(50, 16, 70));
+}
+
+header h1 {
+    font-family: 'Caveat', cursive;
+    color: whitesmoke;
+    margin: 2rem;
+}
+
+.home header h1 {
+    text-shadow: rgb(70, 1, 18) 0px 0px 15px;
+}
+
+.tokyo header h1 {
+    text-shadow: rgb(2, 1, 70) 0px 0px 15px;
+}
+
+.kyoto header h1 {
+    text-shadow:  rgb(112, 11, 17) 0px 0px 15px;
+}
+
+/* #endregion header*/
+
+/* #region home content*/
+
+
+.home a {
+    display: inline-block;
+    height: 15rem;
+    width: 100%;
+    text-decoration: none;
+    text-shadow: black 0px 0px 5px;
+    color: whitesmoke;
+    font-size: 3rem;
+    font-family: 'Caveat', cursive;
+    font-weight: bold;
+    
+}
+
+.tokPic, .kyoPic, .fukPic {
+    width: 100%;
+    max-width: 60%;
+    max-height: 50rem;
+    justify-self: center;
+    background-position: center;
+    background-size: cover;
+    opacity: 80%;
+    filter: grayscale();
+}
+
+.home a:hover, .fukPic:hover, .kyoPic:hover, .tokPic:hover {
+    filter: none;
+    opacity: 95%;
+}
+
+.tokPic {
+    background-image: url('../Bilder/tokyo-tower.jpg'); 
+    grid-area: toklink;
+}
+
+.kyoPic {
+    background-image: url('../Bilder/kyoto-wallpaper2.jpg');
+    grid-area: kyolink;
+}
+
+.icon1 {
+    width: 5rem;
+    height: 5rem;
+    background-image: url('../Icons/torii-gate.png');
+    grid-area: icon1;
+    background-size: cover;
+    justify-self: self-end;
+    align-self: center;
+
+}
+
+.fukPic {
+    background-image: url('../Bilder/fukuoka-wallpaper.jpg');
+    grid-area: fuklink;
+}
+
+.icon2 {
+    width: 5rem;
+    height: 5rem;
+    background-image: url('../Icons/pagoda.png');
+    grid-area: icon2;
+    background-size: cover;
+    justify-self: self-start;
+    align-self: center;
+}
+
+/* #endregion home content */
+
+/* #region detail content */
+ 
+main {
+    width: 80%;
+    height: max-content;
+    margin: 5rem auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+main div {
+    width: 20rem;
+    height: 20rem;
+    margin: 3rem;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+    color: whitesmoke;
+    font-variant: small-caps;
+}
+
+main h2 {
+    margin: 0;
+    padding: 1rem;
+}
+
+.tokyo main h2 {
+    background-color:   rgba(149, 183, 233, 0.7);
+}
+
+.tok1 {
+    background-image: url('../Bilder/asakusa-schrein.jpg');
+}
+
+.tok2 {
+    background-image: url('../Bilder/skytree.jpg');
+}
+
+.tok3 {
+    background-image: url('../Bilder/meiji-schrein.jpg');
+}
+
+.tok4 {
+    background-image: url('../Bilder/tokyo-disneyland.jpg');
+}
+
+.tok5 {
+    background-image: url('../Bilder/kaiserpalast-tokio.jpg');
+}
+
+.kyoto main h2 {
+    background-color:  rgba(247, 108, 84, 0.61);
+}
+
+.kyo1 {
+    background-image: url('../Bilder/kinkakuji.jpg');
+}
+
+.kyo2 {
+    background-image: url('../Bilder/fushimi-inari.jpg');
+}
+
+.kyo3 {
+    background-image: url('../Bilder/Kiyomizu.jpg');
+}
+
+.kyo4 {
+    background-image: url('../Bilder/arashiyama.jpg');
+}
+
+.kyo5 {
+    background-image: url('../Bilder/burg-nijoo.jpg');
+}
+
+.fukuoka main h2 {
+    background-color:  rgba(200, 100, 138, 0.61);
+}
+
+.fuk1 {
+    background-image: url('../Bilder/canal-city-hakata.jpg');
+}
+
+.fuk2 {
+    background-image: url('../Bilder/fukuoka-tower.jpg');
+}
+
+.fuk3 {
+    background-image: url('../Bilder/ohori-park.jpg');
+}
+
+.fuk4 {
+    background-image: url('../Bilder/burg-fukuoka.jpg');
+}
+
+.fuk5 {
+    background-image: url('../Bilder/dazaifu-tenman-guu.jpg');
+}
+
+.fuk6 {
+    background-image: url('../Bilder/kushida-shrine.jpg');
+}
+/* #endregion detail content */
+
+/* #region footer */
+
+footer {
+    min-height: 10rem;
+    width: 100%;
+    text-align: center;
+    color: whitesmoke;
+}
+
+.home footer {
+    background-color:  rgba(160, 100, 115, 0.61);
+    border-top: solid 3px  rgb(199, 111, 133);
+    grid-area: footer; 
+}
+
+.tokyo footer {
+    background-color:  rgba(149, 183, 233, 0.61);
+    border-top: solid 3px  rgb(206, 132, 48);
+}
+
+.kyoto footer {
+    background-color:  rgba(247, 108, 84, 0.61);
+    border-top: solid 3px  rgb(60, 99, 128);
+}
+
+.fukuoka footer {
+    background-color:  rgba(200, 100, 138, 0.61);
+    border-top: solid 3px  rgb(255, 185, 185);
+}
+
+.backlink {
+    width: 10rem;
+    height: 4rem;  
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: fixed;
+    bottom: 3rem;
+    left: 3rem;
+}
+
+.tokyo .backlink {
+    background-image: url('../Icons/left-arrow-blue.png');
+}
+
+.kyoto .backlink {
+    background-image: url('../Icons/left-arrow-red.png');
+}
+
+.fukuoka .backlink {
+    background-image: url('../Icons/left-arrow-purple.png');
+}
+
+.backlink a {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    width: 100%;
+    height: 4rem;
+    transition: 1.5s;
+    color: transparent;
+    text-decoration: none;
+    font-variant: small-caps;
+    padding-left: 4.5rem;
+}
+
+.backlink a:hover, .nextlink a:hover {
+    width: 100%;
+    text-decoration: none;
+    font-size: 2rem;
+    font-variant: small-caps;
+}
+
+.tokyo .backlink a:hover, .tokyo .nextlink a:hover {
+    color:rgb(196, 216, 244);
+}
+
+.kyoto .backlink a:hover, .kyoto .nextlink a:hover{
+    color:rgb(246, 174, 173);
+}
+
+.fukuoka .backlink a:hover, .fukuoka .nextlink a:hover {
+        color:rgb(225, 182, 200);
+}
+
+.nextlink {
+    width: 10rem;
+    height: 4rem;  
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+    position: fixed;
+    bottom: 3rem;
+    right: 3rem;
+}
+
+.tokyo .nextlink {
+    background-image: url('../Icons/right-arrow-blue.png');
+}
+
+.kyoto .nextlink {
+    background-image: url('../Icons/right-arrow-red.png');
+}
+
+.fukuoka .nextlink {
+    background-image: url('../Icons/right-arrow-purple.png');
+}
+
+.nextlink a {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    width: 100%;
+    height: 4rem;
+    transition: 1.5s;
+    color: transparent;
+    text-decoration: none;
+    font-variant: small-caps;
+    padding-right: 4.5rem;
+}
+
+/* #endregion footer */
+
+/* #region media querrie */
+
+@media screen and (max-width: 600px) {
+
+    header {
+        font-size: 4rem;
+    }
+
+    .tokPic, .kyoPic, .fukPic {
+        min-width: 9.5rem;
+        height: 9rem;
+    }
+}
+
+/* #endregion media querrie */
